@@ -28,7 +28,14 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
-      
+
+      - name: Set-up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3-11'
+
+      - name: run Python script
+        run: python test.py
       # - name: Forceer fout
       #   run: |
       #     echo "Build faalt expres"
